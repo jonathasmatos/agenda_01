@@ -1,0 +1,9 @@
+CREATE TABLE `agenda` (
+  `id` INT(10) NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NOT NULL,
+  `contact` VARCHAR(45) NOT NULL,
+  `status` TINYINT(3) NOT NULL,
+  PRIMARY KEY (`id`))
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB;
+
