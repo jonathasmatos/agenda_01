@@ -68,8 +68,9 @@ public class AgendaResource {
 	}
 	@PutMapping("/status/{id}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
-	public void changeStatus(@PathVariable Long id) {
-		service.changeStatus(id);
+	public ResponseEntity<Agenda> changeStatus(@PathVariable Long id) {
+		Agenda objSaved = service.changeStatus(id);
+		return ResponseEntity.ok(objSaved);
 	}
 
 	public String getRequestMapping() {

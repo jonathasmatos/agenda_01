@@ -45,10 +45,15 @@ public class AgendaService {
 		repository.deleteById(id);
 	}
 	
-	public void changeStatus(Long id) {
+	public Agenda changeStatus(Long id) {
+		
 		Agenda obj = findById(id);
-		Boolean status = !obj.getStatus();
-		obj.setStatus(status);
-		repository.save(obj);
+		
+		obj.setStatus(!obj.getStatus());
+		
+		Agenda objSaved = update(obj);
+		
+		return objSaved;
+		
 	}
 }
