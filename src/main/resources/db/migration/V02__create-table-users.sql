@@ -1,0 +1,8 @@
+CREATE TABLE users (
+    `id` INT(10) NOT NULL AUTO_INCREMENT,
+    `login` VARCHAR(100) UNIQUE NOT NULL, 
+    `password` VARCHAR(100) NOT NULL, 
+    `role` VARCHAR(100) NOT NULL,
+     PRIMARY KEY (`id`))
+COLLATE='utf8mb4_0900_ai_ci'
+ENGINE=InnoDB;
