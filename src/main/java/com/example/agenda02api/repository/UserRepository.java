@@ -6,7 +6,5 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.example.agenda02api.model.User;
 
 public interface UserRepository extends JpaRepository<User, String> {
-	
- UserDetails findByLogin(String login);
-
+    UserDetails findByLogin(String login);
 }

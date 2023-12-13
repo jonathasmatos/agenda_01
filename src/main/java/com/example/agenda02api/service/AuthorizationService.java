@@ -11,12 +11,11 @@ import com.example.agenda02api.repository.UserRepository;
 
 @Service
 public class AuthorizationService implements UserDetailsService {
-	@Autowired
-	UserRepository repository;
-	@Override
-	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
-		return repository.findByLogin(username);
-	}
 
+    @Autowired
+    UserRepository repository;
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        return repository.findByLogin(username);
+    }
 }
